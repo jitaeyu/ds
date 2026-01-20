@@ -10,15 +10,15 @@ public class Report0119 {
 //		소수는 제곱을 넘을수없다(ex 5 x 5 = 25 비교값은 25를넘을수없음)
 		   for (int i = 2; i <= 100000; i++) {
 			   
-	            int d;
-	            for (d = 2; d * d <= i; d++) {
-	                if (i % d == 0) {
+	            int j;
+	            for (j = 2; j * j <= i; j++) {
+	                if (i % j == 0) {
 	                	//나머지가 0이면 합성수
 	                	break;
 	                	
 	                }
 	            }
-	            if (d * d > i) {
+	            if (j * j > i) {
 	                System.out.println(i);
 	            }
 	        }
