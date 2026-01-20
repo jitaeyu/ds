@@ -2,6 +2,15 @@ package exam;
 
 public class IfExam3 {
 
+	public static int getFlightFare(int age) {
+			if(age >=19) {
+				return 300_000;	
+			}else {
+				return 100_000;
+			}
+	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int money = 1_000_000;
@@ -11,6 +20,10 @@ public class IfExam3 {
 		int daughter = 11;
 		int adultOneWayFlightFare = 300_000;
 		int kidOneWayFlightFare = 120_000;
+		int flightFare =0;
+		flightFare+=getFlightFare(father);
+		flightFare+=getFlightFare(mother);
+		flightFare+=getFlightFare(daughter);
 		
 		if(father>=19) {
 			money = money-adultOneWayFlightFare;
