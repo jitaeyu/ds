@@ -8,11 +8,10 @@ public class Report0119 {
 //		본인의 Git Repository에 Push하고 Repository 주소를 댓글로 등록하세요.
 		
 //		소수는 제곱을 넘을수없다(ex 5 x 5 = 25 비교값은 25를넘을수없음)
-		   for (int i = 2; i <= 500; i++) {
+		   for (int i = 2; i <= 100000; i++) {
 			   
 	            int d;
 	            for (d = 2; d * d <= i; d++) {
-	            	System.out.println("t:"+d);
 	                if (i % d == 0) {
 	                	//나머지가 0이면 합성수
 	                	break;
