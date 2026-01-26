@@ -9,7 +9,28 @@ public class CoffeeShop {
 		this.hot=hot;
 		this.ice=ice;
 	}
+	public CoffeeShop() {
+		this(new Coffee("기본 아메리카노", 1500),
+				new Coffee("아아", 1500));
+	}
 	
+//	public CoffeeShop() {
+//		this.hot = new Coffee("기본 아메리카노", 1500);
+//		this.ice = new Coffee("아아", 1500);
+//	}
+	
+	/**
+	 * 가장 첫번째 메뉴를 한개 주문한다.
+	 * */
+	public int orderCoffee() {
+		int price = this.orderCoffee(0);
+		return price;
+	}
+
+	public int orderCoffee(int menu) {
+		int price = this.orderCoffee(menu,1);
+		return price;
+	}
 	/**
 	 * @param menu 메뉴들의 번호. 1:hot , 2:ice
 	 * @param quantity 주문수량
