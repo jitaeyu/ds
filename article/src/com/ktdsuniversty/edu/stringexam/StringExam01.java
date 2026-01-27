@@ -78,9 +78,9 @@ public class StringExam01 {
 		String a = number[0];
 		String sangsu= "" + a.charAt(2) + a.charAt(1) + a.charAt(0);
 		String b = number[1];
-		String Stupidsangsu = "" + b.charAt(2) + b.charAt(1) + b.charAt(0);
+		String stupitSangsu = "" + b.charAt(2) + b.charAt(1) + b.charAt(0);
 		int numberA = Integer.parseInt(sangsu);
-		int numnerB = Integer.parseInt(Stupidsangsu);
+		int numnerB = Integer.parseInt(stupitSangsu);
 		if(numberA>numnerB){
 			System.out.println("Q7: "+numberA);
 		}else{
@@ -181,5 +181,7 @@ public class StringExam01 {
 		exam.ExamPg07();
 		exam.ExamPg08();
 		exam.ExamPg09();
+		System.out.println();
+		String aaaa="	";		System.out.println("1"+aaaa+"1");
 	}
 }
