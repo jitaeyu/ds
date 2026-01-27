@@ -42,7 +42,7 @@ public class StringExam01 {
 	
 	public void Exam05() {
 		String az = "baekjoon";
-		String bj = "abcdefghijklmnopqrxyz";
+		String bj = "abcdefghijklmnopqrstuvxyz";
 //		String az="baekjoon";
 		System.out.print("Q5: ");
 		for(int i=0;i<bj.length();i++) {
