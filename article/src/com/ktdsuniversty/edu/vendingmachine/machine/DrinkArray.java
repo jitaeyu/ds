@@ -5,6 +5,10 @@ import com.ktdsuniversty.edu.vendingmachine.item.Drink;
 public class DrinkArray {
 	
 	Drink[] drinks;
+	private int insertMoney;
+	
+	
+	
 	public DrinkArray(Drink bak, Drink mon, Drink hot, Drink mink) {
 		this.drinks = new Drink[4];
 		this.drinks[0] = bak;
@@ -13,7 +17,26 @@ public class DrinkArray {
 		this.drinks[3] = mink;
 	}
 
-	public int orderDrink(int drinkId, int quantity) {
+	
+	
+	
+	public int getInsertMoney() {
+		return insertMoney;
+	}
+
+
+
+
+	public void setInsertMoney(int insertMoney) {
+		this.insertMoney = insertMoney;
+	}
+
+
+
+
+	public int orderDrink(int drinkId, int quantity,int insertMoney) {
+		this.insertMoney=insertMoney;
+		
 		int inv = searchInventory(drinkId);
 		if(drinkId<=0 || drinkId >= this.drinks.length) {
 			if(inv>quantity) {

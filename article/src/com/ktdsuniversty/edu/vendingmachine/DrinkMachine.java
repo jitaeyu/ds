@@ -1,6 +1,7 @@
 package com.ktdsuniversty.edu.vendingmachine;
 
 import com.ktdsuniversty.edu.vendingmachine.item.Drink;
+import com.ktdsuniversty.edu.vendingmachine.item.Refund;
 import com.ktdsuniversty.edu.vendingmachine.machine.DrinkArray;
 
 public class DrinkMachine {
@@ -12,7 +13,15 @@ public class DrinkMachine {
 		Drink milk = new Drink("밀키스", 1400, 5);
 		
 		DrinkArray goodDrink = new DrinkArray(bak, mon, hot, milk);
-		int price = goodDrink.orderDrink(0, 5);
+		
+		DrinkArray refundMuchine = new Refund(bak, mon, hot, milk);
+		int price = goodDrink.orderDrink(0, 5,5000);
+		if(refundMuchine instanceof Refund gogo) {
+			int aa=gogo.orderDrink(0, 5, 5000);
+			int bb=gogo.refundMoney(aa);
+			System.out.println("환불금액은:"+bb);
+		}
+		
 		int findInventory1 = goodDrink.searchInventory(0);
 		int findInventory2 = goodDrink.searchInventory(1);
 		int findInventory3 = goodDrink.searchInventory(2);
