@@ -1,8 +1,10 @@
 package report.restaurant.menu;
 
+import report.restaurant.alcenum.FoodCheck;
+
 public class Menu {
 
-	private int menuId;
+	private FoodCheck foodcheck;
 	private String menuName;
 	private int price;
 	private double alc;
@@ -10,8 +12,8 @@ public class Menu {
 	private double maxAlc;
 	private int maxFull;
 	
-	public Menu(int menuId, String menuName,int price,double alc, int stock,double maxAlc, int maxFull) {
-		this.menuId=menuId;
+	public Menu(FoodCheck foodcheck, String menuName,int price,double alc, int stock,double maxAlc, int maxFull) {
+		this.foodcheck=foodcheck;
 		this.menuName=menuName;
 		this.price=price;
 		this.alc=alc;
@@ -19,8 +21,9 @@ public class Menu {
 		this.maxAlc=maxAlc;
 		this.maxFull=maxFull;
 	}
-	public int getMenuId() {
-		return this.menuId;
+
+	public FoodCheck getFoodcheck() {
+		return this.foodcheck;
 	}
 	public String getmenuName() {
 		return this.menuName;

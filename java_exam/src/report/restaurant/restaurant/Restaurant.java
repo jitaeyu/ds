@@ -3,6 +3,7 @@ package report.restaurant.restaurant;
 import java.util.ArrayList;
 import java.util.List;
 
+import report.restaurant.alcenum.FoodCheck;
 import report.restaurant.custumer.Custumer;
 import report.restaurant.data.ContentData;
 import report.restaurant.exceptions.ArrayException;
@@ -225,8 +226,8 @@ public class Restaurant {
 
 	public void eatMenu(int custumerId, int menuNumber) {
 //		int menuId = menu[menuNumber].getMenuId();
-		int menuId = menu.get(menuNumber).getMenuId();
-		if (menuId == 1) {// 1이면주류 취기올려d
+		FoodCheck menuId = menu.get(menuNumber).getFoodcheck();
+		if (menuId == FoodCheck.ALCOHOL) {// 1이면주류 취기올려d
 			eatAlcMenu(custumerId, menuNumber);
 		} else {// 아니면(입력값2)음식 포만감올려
 			eatFoodMenu(custumerId, menuNumber);
