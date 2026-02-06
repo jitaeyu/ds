@@ -1,0 +1,6 @@
+package com.ktdsuniversty.edu.fp.basic;
+
+public abstract class CallSomething {
+
+	public abstract int call(String message);
+}
